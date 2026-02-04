@@ -1,0 +1,1056 @@
+/* Basic Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+  font-size: 18px; /* Increased for better readability */
+}
+
+/* Prevent scrolling when menu is open */
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+.main-header {
+  position: absolute;
+  width: 100%;
+  /*background: rgba(255, 255, 255, 0.95);*/
+  /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+/* Brand link as a vertical stack */
+.brand a {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #b30000; /* Red accent */
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-flex;
+  flex-direction: column;      /* stack top and bottom lines */
+  align-items: flex-start;     /* left-align or change to center if you prefer */
+  text-decoration: none;
+  font-size: clamp(0.75rem, 5vw, 1.3rem);
+  display: inline-flex;       /* So we can stack the spans vertically */
+  flex-direction: column;     /* Column = top-to-bottom */
+  align-items: flex-start;    /* Or center if you want them centered */
+  text-decoration: none;
+  /* IMPORTANT: remove or override any 'white-space: nowrap' */
+  white-space: normal;        /* Ensures wrapping is allowed */
+}
+
+.brand-top,
+.brand-bottom {
+  display: block;             /* Each span is its own block on a new line */
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  line-height: 1;
+}
+
+
+/* Desktop Nav Defaults */
+.main-nav ul {
+  list-style: none;
+  display: flex; /* horizontal layout on desktop */
+  gap: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Desktop Nav Links */
+.main-nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+.main-nav ul li a:hover {
+  color: #b30000;
+}
+
+/* The fullscreen overlay on mobile is triggered by .active */
+.main-nav ul.active {
+  transform: translateY(0);
+}
+
+.main-nav ul.active a {
+  color: #333;
+}
+
+/* Mobile Navigation Toggle */
+.mobile-nav-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 2000; /* Ensure toggle icon is above the overlay */
+}
+
+/* When the menu is open, position the toggle absolutely in top-right */
+.mobile-nav-toggle.active {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #333;
+}
+
+/* Hero Section with Parallax & Soft Lighting */
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-blend-mode: overlay;
+}
+
+.hero {
+  position: relative;
+  /*overflow: hidden; /* ensures no overflow from the video */
+}
+
+/* Keep the hero at 100vh if you want a full-screen background */
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+}
+
+/* The bar at the bottom of the hero */
+/* --- PARENT LAYOUT: heading (left) + cards (right) --- */
+/* The bar absolutely at bottom of the hero on larger screens */
+.hero-latest-posts {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* ensure it sits above the hero video/content */
+}
+
+/* A flex container for heading (left) + cards (right) */
+.insights-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 1rem; /* space between heading & cards */
+}
+
+/* Style the heading */
+/* -- 1. Pin the bar at the bottom of the hero on desktop -- */
+.hero-latest-posts {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* above the hero background/video */
+}
+
+/* -- 2. A grid for heading (left) + cards (right) -- */
+.insights-inner {
+  display: grid;
+  grid-template-columns: auto 1fr; /* heading is col1, cards col2 */
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Heading styling */
+.hero-latest-posts h2 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #333;
+  white-space: nowrap; /* so the heading doesn’t wrap in a tight bar */
+  align-self: center;  /* vertically center in the grid cell */
+}
+
+/* Limit post card headings to one line with ellipsis */
+.post-card-content h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  line-clamp: 1;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+  min-width: 0;
+}
+
+/* Limit post card excerpts to two lines with ellipsis */
+.post-card-content .entry-excerpt {
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: initial;
+}
+
+/* -- 3. The container for cards: fill all space in col2 evenly -- */
+/* -- 1. Pin the bar at the bottom of the hero on desktop -- */
+.hero-latest-posts {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* above the hero background/video */
+}
+
+/* -- 2. A grid for heading (left) + cards (right) -- */
+.insights-inner {
+  display: grid;
+  grid-template-columns: auto 1fr; /* heading is col1, cards col2 */
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Heading styling */
+.hero-latest-posts h2 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #333;
+  white-space: nowrap; /* so the heading doesn’t wrap in a tight bar */
+  align-self: center;  /* vertically center in the grid cell */
+}
+
+/* -- 3. The container for cards: fill all space in col2 evenly -- */
+/* Pins the bar at the bottom of the hero */
+.hero-latest-posts {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* ensures it's above hero video/content */
+}
+
+/* 5 columns: 1 for heading, 4 for the cards */
+.latest-posts-container {
+  display: grid;
+  grid-template-columns: auto repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 1200px; /* optional max width */
+  margin: 0 auto;    /* center horizontally */
+}
+
+/* Heading cell (column 1) */
+.latest-posts-heading h2 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #333;
+  white-space: nowrap; /* prevents heading from wrapping in a narrow space */
+  align-self: center;  /* vertically center within the grid cell */
+}
+
+/* Post card with thick left image slice */
+.post-card {
+  display: block;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: left;
+}
+
+.post-card-image {
+  width: 60px; /* thickness of the slice */
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.post-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.post-card-content {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem 0.75rem;
+  line-height: 1.4;
+  -webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+}
+.post-card-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  margin: 0 0 0.3rem;
+  color: #333;
+  width: 100%;
+  min-width: 0;
+  display: block;
+}
+.post-card-content p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.85rem;
+  color: #555;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  width: 100%;
+  min-width: 0;
+}
+
+/* Responsive: on mobile, become a normal stacked section */
+@media (max-width: 768px) {
+  .hero-latest-posts {
+    /*position: static; /* no longer pinned */
+    box-shadow: none;
+    margin-top: 1rem; /* optional space above */
+    width: 100vw;
+    position: static;
+    max-width: none;
+  }
+  /* Just 1 column for everything: heading + 4 cards stack */
+  .latest-posts-container {
+    max-width: none;
+    grid-template-columns: 1fr;
+  }
+  /* Limit post card headings to one line with ellipsis */
+.post-card-content h3 {
+  white-space: initial;
+  overflow: none;
+  line-clamp: none;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Limit post card excerpts to two lines with ellipsis */
+.post-card-content .entry-excerpt {
+  white-space: initial;
+  overflow: none;
+  line-clamp: none;
+}
+}
+
+
+
+
+
+/* Video styles */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* places video behind hero content */
+  filter: blur(2px) brightness(0.75);
+}
+
+/* Optional: Hide video on mobile for performance; use poster as background */
+@media (max-width: 768px) {
+  .hero-video {
+    display: none;
+  }
+  .hero {
+    background: url('/assets/chongqing_poster.jpg') no-repeat center center/cover;
+  }
+}
+
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2));
+}
+
+.hero-content {
+  position: relative;
+  color: #fff;
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #b30000, #ff4d4d);
+  color: #fff;
+  border: none;
+  padding: 0.85rem 2.5rem;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #8c0000, #e60000);
+  transform: translateY(-3px);
+}
+
+/* Section Styles */
+section {
+  padding: 4rem 0;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #b30000;
+}
+
+section p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Testimonials */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Make the entire testimonial clickable, but remove default link styling */
+.testimonial-link {
+  display: block;         /* Expand link around the entire blockquote */
+  text-decoration: none;  /* Remove underline */
+  color: inherit;         /* Inherit the blockquote's text color */
+}
+
+/* You can give a subtle hover effect so it feels clickable */
+.testimonial-link:hover blockquote {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+}
+
+/* Flush text left */
+.testimonial-grid blockquote {
+  text-align: left;       /* Left-align the testimonial text */
+}
+
+/* Pseudo-element for the big open quote */
+.testimonial-grid blockquote p::before {
+  content: "“";         /* big open quote character */
+  position: static;   
+  font-size: 3rem;      /* make it large */
+  line-height: 1;       
+  color: #999;          /* subtle gray color, or choose your brand color */
+  font-family: serif;   /* pick a nice font if you want a fancy style */
+}
+
+/* Optionally style the heading differently */
+.testimonial-grid blockquote h3 {
+  margin-bottom: 0.5rem;
+  font-family: 'Playfair Display', serif; /* or your heading font */
+  font-size: 1.2rem;
+  color: #b30000;
+  text-decoration: underline;
+}
+
+/* Keep the citation in the footer aligned left as well */
+.testimonial-grid blockquote footer {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #555;
+}
+
+blockquote p {
+  text-align: left;
+}
+
+blockquote {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-left: 4px solid #b30000;
+  font-style: italic;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 8px;
+}
+
+blockquote:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+blockquote footer {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* Staff Section */
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.staff-member {
+  text-align: center;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.staff-member:hover {
+  transform: translateY(-3px);
+}
+
+.staff-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 4px solid #b30000;
+}
+
+.staff-member h3 {
+  margin-bottom: 0.5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+}
+
+.staff-member .role {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.staff-member .staff-quote {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.social-media {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-media li a {
+  color: #b30000;
+  font-size: 1.4rem;
+  transition: transform 0.3s;
+}
+
+.social-media li a:hover {
+  transform: scale(1.2);
+}
+
+/* Blog Section */
+.blog p {
+  font-size: 1.15rem;
+}
+
+/* CTA Section */
+.cta {
+  min-height: 60vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  background-blend-mode: overlay;
+}
+
+.cta .container {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: auto;
+}
+
+.cta .container p {
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  margin-top: 1rem; /* ensures no overlap with text */
+  display: inline-block;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3));
+}
+
+/* Footer */
+.site-footer {
+  background: #222;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-column h3 {
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+/* Align social media flush left in the footer */
+.footer-column .social-media {
+  justify-content: flex-start;
+}
+
+.footer-column ul li a {
+  color: #fff; /* White links in the footer */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #b30000;
+}
+
+.notice {
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.notice a {
+  color: #fff; /* White links for notice */
+  text-decoration: underline;
+}
+
+.notice a:hover {
+  color: #b30000;
+}
+
+/* --------- Responsive Layout Adjustments --------- */
+@media (max-width: 768px) {
+  /* Show toggle on smaller screens */
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  /* Fullscreen overlay for nav */
+  .main-nav ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.98);
+    flex-direction: column;      /* stacked links */
+    justify-content: center;     /* center vertically */
+    align-items: center;         /* center horizontally */
+    transform: translateY(-100%);/* hidden by default */
+    z-index: 999;
+  }
+
+  .main-nav ul li {
+    margin: 1.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  section h2 {
+    font-size: 2rem;
+  }
+}
+
+/* 1. The Hero Container */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;  /* keep for video BG */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+
+  /* Add bottom padding so the bar doesn't overlap the hero text */
+  padding-bottom: 5rem; /* adjust as needed */
+}
+
+/* 2. The pinned bar on desktop */
+.hero-latest-posts {
+  position: absolute;
+  bottom: 0;
+  left: 0; 
+  right: 0;   /* full width */
+  z-index: 10;
+  
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.75rem 1rem; /* "thin horizontal" bar */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 3. The container for heading + 4 cards
+   => 5 columns: 1 for heading, 4 for cards. */
+.latest-posts-container {
+  display: grid;
+  grid-template-columns: auto repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 1200px; /* center the content horizontally */
+  margin: 0 auto;
+}
+
+/* The heading cell (first column) */
+.latest-posts-heading h2 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #333;
+  white-space: nowrap; /* keeps "Latest Insights" from wrapping in a narrow col */
+  align-self: center;
+}
+
+/* Each post card */
+.post-card {
+  display: block;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: left;
+}
+
+.post-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* Thick left slice for the image */
+.post-card-image {
+  width: 60px;  /* thickness of the slice */
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.post-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* The text content on the right side */
+.post-card-content {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem 0.75rem;
+  line-height: 1.4;
+  -webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+}
+.post-card-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  margin: 0 0 0.3rem;
+  color: #333;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+  width: 100%;
+  min-width: 0;
+  display: block;
+}
+.post-card-content p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.85rem;
+  color: #555;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  width: 100%;
+  min-width: 0;
+}
+
+/* 4. Mobile: unpin & stack vertically */
+@media (max-width: 768px) {
+  .hero {
+    height: initial;
+    padding-top: 5rem;
+  }
+  .hero-latest-posts {
+    position: static;  /* no longer pinned */
+    box-shadow: none;
+    margin-top: 1rem;  /* optional spacing above the bar */
+  }
+  .latest-posts-container {
+    grid-template-columns: 1fr; /* everything in one column */
+    max-width: none;
+    margin: 0;
+  }
+}
+
+
+
+
+
+
+
+
+/* 
+   3 columns on screens wider than 900px, 
+   collapse to 1 column on narrower screens 
+*/
+.culture-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* strictly 3 columns above 900px */
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+  .culture-grid {
+    grid-template-columns: 1fr; /* single column below 900px */
+  }
+}
+
+/* Each .entry is a "card" */
+.culture-grid .entry {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Lift the card and intensify shadow on hover */
+.culture-grid .entry:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* 
+   Force a consistent aspect ratio (e.g., 4:5).
+   Adjust padding-top to your desired ratio:
+   - 100% for square
+   - 125% for 4:5 portrait
+   - 75% for 4:3 landscape
+*/
+.culture-grid .culture-image-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  flex-grow: 2;
+  max-width: 100%;
+  display: flex;
+}
+
+.culture-grid a .p-summary p {
+  text-decoration: none!important;
+}
+
+/* Absolutely position the image within the ratio container */
+.culture-grid .culture-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* clip/crop the image nicely */
+  transition: transform 0.3s ease;
+  flex-grow: 2;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Slight zoom on hover */
+.culture-grid .entry:hover .culture-image-wrapper img {
+  transform: scale(1.05);
+}
+
+/* Title below the image container */
+.culture-grid .entry-header {
+  padding: 1rem;
+}
+
+/* Headline styling */
+.culture-grid .entry-header h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  font-family: 'Playfair Display', serif;
+  color: #333;
+  line-height: 1.3;
+}
+
+.culture-grid p {
+  text-align: left;
+}
+
+/* Excerpt styling */
+.culture-grid .entry-excerpt {
+  padding: 0 1rem 1rem;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Footer meta (date, read time, etc.) */
+.culture-grid .entry-meta {
+  margin: 0 1rem 1rem;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Make post title links look normal */
+.culture-grid .entry-header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.culture-grid .entry-header a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+.special-container {
+  position: relative;
+  padding-left: 60px; /* Space for the image plus some padding */
+  overflow: hidden; /* Ensures the clipped image doesn't cause scrollbars */
+}
+
+.special-decoration-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%; /* Full height of container */
+  width: auto; /* Maintain aspect ratio */
+  max-width: none; /* Override any max-width constraints */
+  clip-path: inset(0 calc(100% - 50px) 0 0); /* Clip everything except leftmost 50px */
+  /* Alternative for older browsers: */
+  /* max-width: 50px; */
+  /* object-fit: cover; */
+  /* object-position: left; */
+}
+
+
+
+
+.services-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.service-card {
+  background: #fff;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+}
+.service-icon {
+  font-size: 2rem;
+  color: #b30000;
+  margin-bottom: 1rem;
+}
+
+.ready-expand::before {
+  content: "";
+  position: absolute;
+  inset: 0;               /* top: 0; right: 0; bottom: 0; left: 0; */
+  background: rgba(255, 255, 255, 0.3); /* optional tinted overlay */
+  z-index: 0;             /* behind content, but above background */
+  filter: blur(2px) brightness(0.5);
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/shenzen-skyline.webp');
+  background-size: cover;  /* fill container, cropping if needed */
+  background-attachment: fixed; /* or 'fixed' for parallax effect */
+  background-blend-mode: normal; /* optional for overlays */
+}

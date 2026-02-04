@@ -1,0 +1,250 @@
+---
+title: "Silk & Sound Society: Jing Ying Cantonese Opera Show XII"
+date: 2025-05-18
+card: /assets/landing/jing-ying-cantonese-opera-show-xii/sue-friend-dressed-up.jpg
+excerpt: "Sue guides you through the Jing Ying Opera Show XII live in San Francisco."
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silk & Sound Society - Ying Jing XII</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            overflow: hidden;
+            text-align: center;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .hero-section {
+            opacity: 0;
+            animation: fadeIn 0.7s ease-out 0.3s forwards;
+            width: 100%;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .headline {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #1a1a1a;
+            animation: fadeInHeadline 0.3s ease-out forwards;
+        }
+
+        @keyframes fadeInHeadline {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .sub-headline {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            color: #4A5568;
+            letter-spacing: 0.025em; /* Subtle letter spacing added */
+        }
+
+        .date-venue {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            color: #718096;
+        }
+
+        .tagline {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-style: italic;
+            color: #4A5568;
+        }
+
+        .cta-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.85rem; /* Slightly adjusted gap */
+            margin-bottom: 2.25rem; /* Slightly adjusted margin */
+        }
+
+        .cta-button {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-radius: 8px;
+            transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s ease-out, color 0.2s ease-out;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            min-width: 180px;
+            text-decoration: none;
+            display: inline-block;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: #B91C1C;
+            color: white;
+        }
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(185, 28, 28, 0.5);
+            background-color: #A01818;
+        }
+
+        .btn-follow-up {
+            border: 2px solid #B45309;
+            color: #B45309;
+            background-color: transparent;
+        }
+        .btn-follow-up:hover {
+            transform: scale(1.05);
+            background-color: rgba(180, 83, 9, 0.05);
+            box-shadow: 0 0 15px rgba(180, 83, 9, 0.2);
+            color: #92400E;
+        }
+
+        .cta-arrow {
+            font-size: 1.35rem; /* Slightly reduced arrow size */
+            color: #718096;
+            margin: 0 0.5rem;
+            display: none;
+        }
+         .cta-arrow-mobile {
+            font-size: 1.35rem; /* Slightly reduced arrow size */
+            color: #718096;
+            margin: 0.15rem 0; /* Adjusted margin for smaller arrow */
+            display: block;
+        }
+
+
+        .footer {
+            width: 100%;
+            padding-top: 1.5rem; /* Increased padding-top */
+            font-size: 0.75rem;
+            color: #A0AEC0;
+            margin-top: auto;
+        }
+        .footer p {
+            margin-bottom: 0.25rem;
+        }
+        .footer a {
+            color: #718096;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+            color: #2D3748;
+        }
+
+        @media (min-width: 640px) {
+            .cta-container {
+                flex-direction: row;
+                align-items: center;
+                gap: 1rem; /* Adjusted gap for desktop */
+                margin-bottom: 3rem; /* Adjusted margin for desktop */
+            }
+            .cta-arrow {
+                display: inline-block;
+            }
+            .cta-arrow-mobile {
+                display: none;
+            }
+            .footer {
+                font-size: 0.875rem;
+            }
+        }
+
+        @media (max-width: 639px) {
+            .headline {
+                font-size: 2.5rem;
+            }
+            .sub-headline {
+                font-size: 1.25rem;
+                margin-bottom: 0.75rem; /* Adjusted margin */
+            }
+            .date-venue {
+                 font-size: 1rem;
+                 margin-bottom: 1.25rem; /* Adjusted margin */
+            }
+            .tagline {
+                font-size: 0.875rem;
+            }
+            .cta-button {
+                font-size: 0.875rem;
+                padding: 0.625rem 1.25rem;
+                min-width: 160px;
+                width: 80%;
+                max-width: 280px;
+            }
+            .footer {
+                font-size: 0.625rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="hero-section p-6 md:p-8">
+            <h1 class="headline text-5xl md:text-6xl lg:text-7xl mb-4 md:mb-6">
+                Silk & Sound Society
+            </h1>
+
+            <h2 class="sub-headline text-xl md:text-2xl lg:text-3xl mb-4 md:mb-5">
+                Brunch · Cantonese Opera · Cocktails
+            </h2>
+
+            <p class="date-venue text-lg md:text-xl mb-5 md:mb-6">
+                Saturday, May 24 | Chinatown, San Francisco
+            </p>
+
+            <p class="tagline text-base md:text-lg mb-8 md:mb-10">
+                Sue guides you into the world of Cantonese Opera.
+            </p>
+
+            <div class="cta-container">
+                <a href="https://www.tickettailor.com/events/jingyingcantoneseoperainstitute/1590231" target="_blank" rel="noopener noreferrer"
+                   class="cta-button btn-primary text-base sm:text-lg">
+                    Buy Tickets
+                </a>
+                <div class="cta-arrow-mobile sm:hidden">&darr;</div>
+                <div class="cta-arrow hidden sm:inline-block">&rarr;</div>
+                <a href="https://partiful.com/e/ttnWI0uWYCeqp6n25SHq" target="_blank" rel="noopener noreferrer"
+                   class="cta-button btn-follow-up text-sm sm:text-base">
+                    Then Join Our Group
+                </a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Questions? Email <a href="mailto:hello@chinawest.consulting">hello@chinawest.consulting</a></p>
+            <p>More info: <a href="http://xii.chinawest.consulting" target="_blank" rel="noopener noreferrer">xii.chinawest.consulting</a></p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% comment %}Initialize arguments{% endcomment %}
+{% assign only_heading = include.only_heading | default: false %}
+{% assign only_content = include.only_content | default: false %}
+
+{% comment %}Split the content at </h2> tags{% endcomment %}
+{% assign sections = page.content | split: "</h2>" %}
+
+{% if sections.size > 0 %}
+  {% assign first_section_parts = sections.first | split: "<h2" %}
+  {% if first_section_parts.size > 1 %}
+    {% comment %}Re-construct the first <h2> tag with attributes if any{% endcomment %}
+    {% assign first_h2_with_attributes = "<h2" | append: first_section_parts[1] | append: "</h2>" %}
+    
+    {% comment %}Capture content after the first </h2> until the next <h2>, if present{% endcomment %}
+    {% assign post_first_section = sections[1] | default: "" %}
+    {% assign next_section_start = post_first_section | split: "<h2" %}
+    {% assign content_after_first_h2 = next_section_start.first %}
+  {% endif %}
+  
+  {% if only_heading %}
+    {% comment %}Output only the first <h2> heading{% endcomment %}
+    {{ first_h2_with_attributes | markdownify }}
+  {% elsif only_content %}
+    {% comment %}Output only the content after the first <h2> heading{% endcomment %}
+    {{ content_after_first_h2 | markdownify }}
+  {% else %}
+    {% comment %}Output the first <h2> heading and its content{% endcomment %}
+    {{ first_h2_with_attributes | append: content_after_first_h2 | markdownify }}
+  {% endif %}
+{% endif %}

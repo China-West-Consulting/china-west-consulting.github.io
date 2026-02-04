@@ -1,0 +1,710 @@
+---
+layout: none # Preserved from original
+excerpt: "China West Consulting" # Preserved from original
+show_excerpts: true # Preserved from original
+paginate: false # Preserved from original
+entries_layout: list # Preserved from original
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>China West Consulting | Bridging Markets, Building Futures</title>
+    <meta name="description" content="China West Consulting: Expert guidance for businesses navigating expansion between China and Western markets." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@latest/dist/lucide.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+      /* Style for SVG icons to inherit text color (Kept for social icons) */
+      .social-icon {
+        fill: currentColor;
+        width: 1.25rem; /* Default size, adjust as needed */
+        height: 1.25rem; /* Default size, adjust as needed */
+        display: inline-block;
+        vertical-align: middle; /* Align icons nicely */
+      }
+      /* Base styling for Lucide icons */
+      i[data-lucide] {
+        width: 1em; /* Default width, can be overridden by Tailwind */
+        height: 1em; /* Default height, can be overridden by Tailwind */
+        display: inline-block; /* Ensure proper alignment */
+        vertical-align: middle; /* Align with text */
+        line-height: 1; /* Prevent extra spacing */
+        stroke-width: 2; /* Match guideline stroke width */
+      }
+      /* Ensure promotion card images maintain aspect ratio */
+      .promotion-card-image {
+        aspect-ratio: 16 / 9; /* Common aspect ratio for cards */
+        object-fit: cover; /* Cover the area without distortion */
+      }
+      /* Custom Hero Overlay approximating Burgundy/Navy Duotone */
+      .hero-overlay::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /* Mix Burgundy and Navy with transparency */
+        background: linear-gradient(to right, rgba(26, 26, 47, 0.8), rgba(122, 31, 31, 0.6)); /* Navy 80% -> Burgundy 60% */
+        z-index: 10; /* Ensure overlay is above video */
+      }
+      /* Ensure content is above the overlay */
+      .hero-content {
+        position: relative;
+        z-index: 20;
+      }
+    </style>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'cw-burgundy': '#7A1F1F', // Primary
+              'cw-navy': '#1A1A2F',     // Primary
+              'cw-offwhite': '#F7F5F2', // Background
+              'cw-gold': '#D4AF37',     // Accent
+              'cw-gray': '#6E7480',     // Neutral
+            },
+            fontFamily: {
+              // Use Crimson Pro for serif, with fallbacks
+              'serif': ['"Crimson Pro"', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+              // Use Inter for sans-serif, with fallbacks
+              'sans': ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', '"Noto Sans"', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"'],
+            },
+            // Match guideline typography sizes (using closest Tailwind defaults or custom values)
+            fontSize: {
+              'h1': ['3rem', '3.5rem'],          // 48px / 56px -> text-5xl / leading-[3.5rem]
+              'h2': ['2.25rem', '2.75rem'],      // 36px / 44px -> text-4xl / leading-[2.75rem]
+              'h3': ['1.75rem', '2.25rem'],      // 28px / 36px -> text-3xl / leading-[2.25rem]
+              'body': ['1rem', '1.5rem'],        // 16px / 24px -> text-base / leading-6 (default)
+              'caption': ['0.875rem', '1.25rem'], // 14px / 20px -> text-sm / leading-5
+            },
+          }
+        }
+      }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L2MM1419LD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L2MM1419LD');
+    </script>
+
+</head>
+<body class="bg-cw-offwhite font-sans text-cw-navy antialiased text-body">
+
+    <header class="py-4 px-6 md:px-12 lg:px-24 shadow-sm sticky top-0 bg-cw-offwhite z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="https://chinawest.consulting" class="flex items-center space-x-2">
+                <div class="w-6 h-6 bg-cw-burgundy rounded-sm"></div>
+                <span class="font-serif text-xl font-semibold text-cw-navy tracking-wide">CHINA WEST</span>
+            </a>
+            <nav>
+                 <a href="#contact" class="bg-cw-burgundy text-white py-2 px-5 rounded-md hover:bg-opacity-90 transition duration-300 text-caption font-medium">
+                    Contact Us
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="bg-cw-navy text-center relative overflow-hidden min-h-screen flex items-center justify-center py-20 px-6 md:px-12 lg:px-24 hero-overlay">
+        <video autoplay loop muted playsinline poster="https://chinawest.consulting/assets/chongqing_poster.jpg" class="absolute top-0 left-0 w-full h-full object-cover z-0">
+            <source src="https://chinawest.consulting/assets/optimized_chongqing_night.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="container mx-auto max-w-4xl hero-content">
+             <h1 class="text-h1 font-serif font-bold uppercase text-white mb-6 drop-shadow-md">
+                Navigate the Complexities of Chinese Markets with Confidence
+            </h1>
+            <p class="text-lg md:text-xl text-white opacity-90 mb-10 max-w-2xl mx-auto drop-shadow-sm leading-relaxed">
+                We help ambitious businesses build successful cross-border strategies between China and Western markets through expert guidance, cultural intelligence, and regulatory expertise.
+            </p>
+            <div class="flex flex-col space-y-4 items-center sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                <a href="#contact" class="bg-cw-burgundy text-white py-3 px-8 rounded-md hover:bg-opacity-90 transition duration-300 text-lg font-medium inline-block shadow-md">
+                    Schedule a Consultation
+                </a>
+                <a href="#services" class="bg-transparent border-2 border-white text-white py-3 px-8 rounded-md hover:bg-white hover:text-cw-burgundy transition duration-300 text-lg font-medium inline-block shadow-md">
+                    Explore Our Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="latest-insights" aria-labelledby="latest-insights-title" class="bg-cw-offwhite py-16 md:py-20 px-6 md:px-12 lg:px-24">
+        <div class="container mx-auto">
+            <div class="md:flex justify-between items-center mb-10 md:mb-12">
+                <h2 id="latest-insights-title" class="text-h2 font-serif font-semibold text-cw-navy mb-4 md:mb-0">
+                    Latest Insights
+                </h2>
+                 <a href="/insights" class="inline-flex items-center text-cw-burgundy hover:text-cw-navy transition duration-300 font-medium group text-caption uppercase tracking-wider">
+                    Explore All Insights
+                    <i data-lucide="arrow-right" class="ml-1.5 group-hover:translate-x-1 transition-transform duration-200 w-4 h-4"></i>
+                 </a>
+            </div>
+
+             <div class="grid md:grid-cols-3 gap-x-8 lg:gap-x-12 gap-y-8">
+                 {% assign new_insights = site.posts | where: 'category', 'insights' | sort: 'date' | reverse %}
+                 {% if new_insights.size > 0 %}
+                     {% for entry in new_insights limit: 3 %}
+                         {% assign title = entry.title | default: 'Untitled Insight' | markdownify | strip_html %}
+                         {% assign link = entry.link | default: entry.url | relative_url %}
+
+                         <a href="{{ link }}" class="group block p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-cw-burgundy/50 focus:ring-offset-2">
+                             <div class="flex items-start space-x-4">
+                                 {% if entry.image.thumbnail %}
+                                     {% assign entry_image = entry.image.thumbnail %}
+                                     {% unless entry_image contains '://' %}{% assign entry_image = entry_image | relative_url %}{% endunless %}
+                                     {% assign entry_image = entry_image | escape %}
+                                     <img src="{{ entry_image }}" alt="" class="w-20 h-20 object-cover rounded-md flex-shrink-0 mt-1 shadow-sm border border-gray-200">
+                                 {% else %}
+                                     <div class="w-20 h-20 bg-white rounded-md flex-shrink-0 mt-1 flex items-center justify-center shadow-sm border border-gray-200">
+                                         <i data-lucide="image" class="text-cw-gray opacity-50 w-8 h-8"></i>
+                                     </div>
+                                 {% endif %}
+                                 <div class="flex-grow">
+                                     <h3 class="font-serif text-lg font-semibold text-cw-navy group-hover:text-cw-burgundy transition-colors duration-300 mb-1 leading-tight">{{ title }}</h3>
+                                     {% if entry.excerpt %}
+                                     <p class="text-caption text-cw-gray leading-relaxed font-sans mb-2">
+                                         {{ entry.excerpt | markdownify | strip_html | truncatewords: 15 }}
+                                     </p>
+                                     {% endif %}
+                                     {% if entry.date %}
+                                        <p class="text-xs text-cw-gray font-sans">
+                                            <time datetime="{{ entry.date | date_to_xmlschema }}">
+                                                {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
+                                                {{ entry.date | date: date_format }}
+                                            </time>
+                                        </p>
+                                     {% endif %}
+                                 </div>
+                             </div>
+                         </a>
+                     {% endfor %}
+                 {% else %}
+                     <p class="text-cw-gray md:col-span-3 font-sans">No recent insights found.</p>
+                 {% endif %}
+                 </div>
+        </div>
+    </section>
+
+    <section id="latest-promotions" aria-labelledby="latest-promotions-title" class="bg-white py-16 md:py-20 px-6 md:px-12 lg:px-24">
+        <div class="container mx-auto">
+            <div class="md:flex justify-between items-center mb-10 md:mb-12">
+                <h2 id="latest-promotions-title" class="text-h2 font-serif font-semibold text-cw-navy mb-4 md:mb-0">
+                    Latest Promotions & Events
+                </h2>
+                 <a href="/events" class="inline-flex items-center text-cw-burgundy hover:text-cw-navy transition duration-300 font-medium group text-caption uppercase tracking-wider">
+                    View All Events
+                    <i data-lucide="arrow-right" class="ml-1.5 group-hover:translate-x-1 transition-transform duration-200 w-4 h-4"></i>
+                 </a>
+            </div>
+
+             <div class="grid md:grid-cols-3 gap-x-8 lg:gap-x-12 gap-y-10">
+                 {% comment %} Fetch posts from the 'landing' collection, sort by date descending {% endcomment %}
+                 {% assign latest_promotions = site.landing | sort: 'date' | reverse %}
+
+                 {% if latest_promotions.size > 0 %}
+                     {% for promotion in latest_promotions limit: 3 %}
+                         {% assign title = promotion.title | default: 'Upcoming Event' | markdownify | strip_html %}
+                         {% assign link = promotion.url | relative_url %}
+                         {% assign card_image = promotion.card %}
+                         {% unless card_image contains '://' %}{% assign card_image = card_image | relative_url %}{% endunless %}
+                         {% assign card_image = card_image | escape %}
+
+                         <div class="group flex flex-col">
+                             <a href="{{ link }}" class="block mb-4 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-200/50 focus:outline-none focus:ring-2 focus:ring-cw-burgundy/50 focus:ring-offset-4">
+                                 {% if card_image %}
+                                     <img src="{{ card_image }}" alt="{{ title | escape }}" class="w-full promotion-card-image">
+                                 {% else %}
+                                     <div class="w-full promotion-card-image bg-cw-offwhite flex items-center justify-center">
+                                         <i data-lucide="calendar-event" class="text-cw-gray opacity-50 w-12 h-12"></i>
+                                     </div>
+                                 {% endif %}
+                             </a>
+                             <div class="flex-grow">
+                                 <h3 class="font-serif text-lg font-semibold text-cw-navy mb-1 leading-tight">
+                                     <a href="{{ link }}" class="hover:text-cw-burgundy transition-colors duration-300">{{ title }}</a>
+                                 </h3>
+                                    {% if promotion.excerpt %}
+                                        <p class="text-caption text-cw-gray leading-relaxed font-sans mb-2">
+                                            {{ promotion.excerpt | markdownify | strip_html | truncatewords: 15 }}
+                                        </p>
+                                    {% endif %}
+                                 {% if promotion.date %}
+                                     <p class="text-xs text-cw-gray font-sans">
+                                         <time datetime="{{ promotion.date | date_to_xmlschema }}">
+                                             {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
+                                             {{ promotion.date | date: date_format }}
+                                         </time>
+                                     </p>
+                                 {% endif %}
+                             </div>
+                         </div>
+                     {% endfor %}
+                 {% else %}
+                     <p class="text-cw-gray md:col-span-3 font-sans">No current promotions or events found. Please check back soon.</p>
+                 {% endif %}
+                 </div>
+        </div>
+    </section>
+
+    <section aria-labelledby="featured-resources-title" class="bg-cw-navy text-cw-offwhite py-16 md:py-20 px-6 md:px-12 lg:px-24">
+        <div class="container mx-auto">
+            <div class="md:flex justify-between items-center mb-10 md:mb-12">
+                <h2 id="featured-resources-title" class="text-h2 font-serif font-semibold mb-4 md:mb-0">
+                    Featured Resources
+                </h2>
+                 <a href="/resources" class="inline-flex items-center text-cw-offwhite/80 hover:text-white focus:text-white focus:outline-none transition-colors duration-300 font-medium group text-caption uppercase tracking-wider">
+                    Explore All Resources
+                    <i data-lucide="arrow-right" class="ml-1.5 group-hover:translate-x-1 transition-transform duration-200 w-4 h-4"></i>
+                </a>
+            </div>
+
+             <div class="grid md:grid-cols-3 gap-x-10 gap-y-8">
+                 {% assign new_resources = site.posts | where: 'category', 'resources' | sort: 'date' | reverse %}
+                 {% if new_resources.size > 0 %}
+                     {% for entry in new_resources limit: 3 %}
+                         {% assign title = entry.title | default: 'Untitled Resource' | markdownify | strip_html %}
+                         {% assign link = entry.link | default: entry.url | relative_url %}
+
+                         <a href="{{ link }}" class="block group py-4 border-b border-cw-offwhite/20 hover:border-cw-offwhite/50 focus:outline-none focus:border-cw-offwhite/50 transition-colors duration-300">
+                            <div class="flex items-start">
+                                <i data-lucide="file-text" class="mr-3 mt-1 text-cw-offwhite/50 group-hover:text-cw-offwhite/70 transition-colors duration-300 flex-shrink-0 w-4 h-4"></i>
+                                <div>
+                                     <h3 class="font-serif text-lg font-semibold text-cw-offwhite group-hover:text-white transition-colors duration-300 mb-1.5 leading-snug">{{ title }}</h3>
+                                     {% if entry.excerpt %}
+                                     <p class="text-caption text-cw-offwhite/70 leading-relaxed font-sans">
+                                         {{ entry.excerpt | markdownify | strip_html | truncatewords: 18 }}
+                                     </p>
+                                     {% endif %}
+                                 </div>
+                             </div>
+                        </a>
+                    {% endfor %}
+                 {% else %}
+                    <p class="text-cw-offwhite/70 md:col-span-3 font-sans">Check back soon for our latest resources.</p>
+                 {% endif %}
+                 </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white">
+        <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold uppercase text-cw-navy mb-6">
+                    Your Bridge to the East
+                </h2>
+                 <p class="text-cw-gray mb-4 leading-relaxed">
+                    China West has provided unparalleled strategic counsel to companies and ambitious enterprises. We combine deep, boots-on-the-ground local expertise with a nuanced understanding of Western business objectives, offering actionable insights and hands-on support.
+                </p>
+                <p class="text-cw-gray mb-4 leading-relaxed">
+                    Our team comprises seasoned experts in market entry, regulatory navigation, supply chain optimization, cross-border M&A, and cultural integration. We don't just advise; we partner with you to execute strategies that deliver tangible results in China.
+                </p>
+                <ul class="space-y-2 mt-6 text-base">
+                    <li class="flex items-center">
+                        <i data-lucide="check" class="text-cw-burgundy mr-2 w-5 h-5 flex-shrink-0"></i> <span>Decades of Dedicated In-Market Experience</span>
+                    </li>
+                     <li class="flex items-center">
+                        <i data-lucide="check" class="text-cw-burgundy mr-2 w-5 h-5 flex-shrink-0"></i> <span>Bilingual, Bicultural Expertise Bridging Gaps</span>
+                    </li>
+                     <li class="flex items-center">
+                        <i data-lucide="check" class="text-cw-burgundy mr-2 w-5 h-5 flex-shrink-0"></i> <span>Proven Track Record of Measurable Client Success</span>
+                    </li>
+                      <li class="flex items-center">
+                        <i data-lucide="check" class="text-cw-burgundy mr-2 w-5 h-5 flex-shrink-0"></i> <span>Tailored Strategies, Not Off-the-Shelf Solutions</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                 <div class="bg-cw-offwhite rounded-lg shadow-lg p-1 h-80 flex items-center justify-center border border-gray-200/50">
+                     <img src="https://chinawest.consulting/assets/shenzen-skyline.webp" alt="Shenzhen Skyline representing bridging East and West" class="object-cover w-full h-full rounded-md">
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-cw-offwhite">
+        <div class="container mx-auto">
+             <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-h2 font-serif font-bold uppercase text-cw-navy mb-4">
+                    Our Services
+                </h2>
+                <p class="text-lg text-cw-gray">
+                    We provide comprehensive solutions to help businesses successfully navigate the complex landscape of cross-border operations between China and Western markets.
+                </p>
+            </div>
+
+             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200/50 hover:shadow-lg transition-shadow duration-300">
+                    <i data-lucide="landmark" class="text-cw-burgundy mb-4 w-8 h-8 block"></i>
+                    <h3 class="font-serif text-xl font-semibold uppercase text-cw-navy mb-3">Market Entry Strategy</h3>
+                    <p class="text-caption text-cw-gray leading-relaxed">
+                        We create customized roadmaps for successful expansion into Chinese markets, tailored to your industry, scale, and business objectives. Our strategies are built on deep market research and decades of experience.
+                    </p>
+                </div>
+                 <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200/50 hover:shadow-lg transition-shadow duration-300">
+                    <i data-lucide="shield-check" class="text-cw-burgundy mb-4 w-8 h-8 block"></i>
+                    <h3 class="font-serif text-xl font-semibold uppercase text-cw-navy mb-3">Regulatory Compliance</h3>
+                    <p class="text-caption text-cw-gray leading-relaxed">
+                        Navigate China's complex regulatory environment with confidence. We handle all legal filings, ensure complete compliance with Chinese regulations, and help you adapt to policy changes with minimal disruption.
+                    </p>
+                </div>
+                 <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200/50 hover:shadow-lg transition-shadow duration-300">
+                    <i data-lucide="users" class="text-cw-burgundy mb-4 w-8 h-8 block"></i>
+                    <h3 class="font-serif text-xl font-semibold uppercase text-cw-navy mb-3">Partnership Development</h3>
+                    <p class="text-caption text-cw-gray leading-relaxed">
+                        We help you identify and cultivate strategic partnerships with Chinese businesses, distributors, and stakeholders that align with your vision and accelerate your growth in the market.
+                    </p>
+                </div>
+                 <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200/50 hover:shadow-lg transition-shadow duration-300">
+                    <i data-lucide="globe" class="text-cw-burgundy mb-4 w-8 h-8 block"></i>
+                    <h3 class="font-serif text-xl font-semibold uppercase text-cw-navy mb-3">Cultural Integration</h3>
+                    <p class="text-caption text-cw-gray leading-relaxed">
+                         Successfully adapt your marketing, operations, and communication to Chinese cultural expectations. Our cultural intelligence training ensures your team can build trusted relationships and avoid costly missteps.
+                    </p>
+                </div>
+                 <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200/50 hover:shadow-lg transition-shadow duration-300">
+                    <i data-lucide="trending-up" class="text-cw-burgundy mb-4 w-8 h-8 block"></i>
+                    <h3 class="font-serif text-xl font-semibold uppercase text-cw-navy mb-3">Growth Optimization</h3>
+                    <p class="text-caption text-cw-gray leading-relaxed">
+                        For businesses already operating in China, we provide strategies to overcome plateaus, expand market share, and adapt to changing market conditions for sustained success.
+                    </p>
+                </div>
+                 <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200/50 hover:shadow-lg transition-shadow duration-300">
+                    <i data-lucide="smartphone" class="text-cw-burgundy mb-4 w-8 h-8 block"></i>
+                    <h3 class="font-serif text-xl font-semibold uppercase text-cw-navy mb-3">Digital Presence</h3>
+                    <p class="text-caption text-cw-gray leading-relaxed">
+                        Develop a strategic digital presence on Chinese platforms like WeChat, Weibo, and Xiaohongshu. We help you navigate China's unique digital ecosystem to reach your target audience effectively.
+                    </p>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                 <a href="#contact" class="border border-cw-burgundy text-cw-burgundy py-2 px-6 rounded-md hover:bg-cw-burgundy hover:text-white transition duration-300 text-base font-medium inline-block">
+                    Discuss Your Needs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white">
+        <div class="container mx-auto">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-h2 font-serif font-bold uppercase text-cw-navy mb-4">
+                     Success Stories
+                </h2>
+                <p class="text-lg text-cw-gray">
+                    Hear from our clients who have successfully expanded their businesses into Chinese markets with our strategic guidance.
+                </p>
+            </div>
+
+             <div class="grid md:grid-cols-2 gap-8">
+                 {% assign all_testimonials = site.posts | where: 'category', 'successes' %}
+                {% for testimonial in all_testimonials limit: 4 %}
+                    {% assign link = testimonial.url | relative_url %}
+                    {% assign title = testimonial.title | default: 'Client Success Story' %}
+                    {% assign quote = testimonial.quote | default: 'China West provided invaluable support.' %}
+                    {% assign author = testimonial.quoteAuthor | default: 'Valued Client' %}
+                    <a href="{{ link }}" class="block bg-cw-offwhite p-8 rounded-lg shadow-md border border-gray-200/50 hover:shadow-lg transition-shadow duration-300 relative">
+                        <i data-lucide="quote" class="text-cw-burgundy opacity-20 absolute top-4 left-4 w-12 h-12"></i>
+                        <div class="relative pl-8 pt-4">
+                             <h3 class="font-serif text-lg font-semibold text-cw-navy mb-3">{{ title }}</h3>
+                             <blockquote class="text-base text-cw-gray italic mb-4">
+                                "{{ quote }}"
+                            </blockquote>
+                            <cite class="text-caption font-medium text-cw-navy not-italic">— {{ author }}</cite>
+                        </div>
+                    </a>
+                {% endfor %}
+                 </div>
+
+             <div class="text-center mt-12">
+                 <a href="https://chinawest.consulting/successes" class="border border-cw-burgundy text-cw-burgundy py-2 px-6 rounded-md hover:bg-cw-burgundy hover:text-white transition duration-300 text-base font-medium inline-block">
+                    View All Success Stories
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-cw-offwhite">
+        <div class="container mx-auto">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-h2 font-serif font-bold uppercase text-cw-navy mb-4">
+                    Leadership Team
+                </h2>
+                <p class="text-lg text-cw-gray">
+                     Meet our dedicated professionals with decades of experience bridging the business gap between China and Western markets.
+                </p>
+            </div>
+
+             <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md border border-gray-200/50 overflow-hidden text-center hover:shadow-lg transition-shadow duration-300">
+                    <img src="https://chinawest.consulting/assets/profile-sue-paige.jpg" alt="Sue Paige, CEO & Founder" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-semibold text-cw-navy mb-1">Sue Paige</h3>
+                        <p class="text-xs uppercase text-cw-burgundy font-medium tracking-wider mb-3">CEO & FOUNDER</p>
+                        <p class="text-caption text-cw-gray mb-4">
+                            With nearly two decades of experience at the intersection of technology and business, Sue specializes in helping Western companies successfully enter and thrive in Chinese markets.
+                        </p>
+                         <div class="flex justify-center space-x-3">
+                             <a href="https://www.linkedin.com/in/sue-p" target="_blank" rel="noopener noreferrer" class="text-cw-gray hover:text-cw-burgundy transition-colors" aria-label="Sue Paige LinkedIn">
+                                 <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+                             </a>
+                             <a href="https://sue.do/" target="_blank" rel="noopener noreferrer" class="text-cw-gray hover:text-cw-burgundy transition-colors" aria-label="Sue Paige Website">
+                                 <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path></svg>
+                             </a>
+                             <a href="https://x.com/sue_do_paige" target="_blank" rel="noopener noreferrer" class="text-cw-gray hover:text-cw-burgundy transition-colors" aria-label="Sue Paige X Profile">
+                                 <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                             </a>
+                         </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md border border-gray-200/50 overflow-hidden text-center hover:shadow-lg transition-shadow duration-300">
+                    <img src="https://chinawest.consulting/assets/candice-zhang-profile.jpg" alt="Candice Zhang, Chinese Lawyer" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-semibold text-cw-navy mb-1">Candice Zhang</h3>
+                        <p class="text-xs uppercase text-cw-burgundy font-medium tracking-wider mb-3">CHINESE LAWYER, AMERICAN BAR APPLICANT</p>
+                        <p class="text-caption text-cw-gray mb-4">
+                             Candice brings a wealth of legal expertise to help businesses navigate regulatory landscapes in both China and the United States, specializing in compliance and cross-border agreements.
+                        </p>
+                        <div class="flex justify-center space-x-3">
+                             <a href="https://www.linkedin.com/in/yaqi-zhang-184b412b8/" target="_blank" rel="noopener noreferrer" class="text-cw-gray hover:text-cw-burgundy transition-colors" aria-label="Candice Zhang LinkedIn">
+                                 <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+                             </a>
+                             <a href="https://chinawest.consulting/" target="_blank" rel="noopener noreferrer" class="text-cw-gray hover:text-cw-burgundy transition-colors" aria-label="China West Consulting Website">
+                                 <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path></svg>
+                             </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md border border-gray-200/50 overflow-hidden text-center hover:shadow-lg transition-shadow duration-300">
+                    <img src="https://chinawest.consulting/assets/profile-mo-hawagri.jpg" alt="Mo Hawagri" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-semibold text-cw-navy mb-1">Mo Hawagri</h3>
+                        <p class="text-xs uppercase text-cw-burgundy font-medium tracking-wider mb-3">Videography, Photography</p>
+                        <p class="text-caption text-cw-gray mb-4">
+                            Mo is a talented videographer and photographer with a keen eye for capturing the essence of cross-cultural business interactions, enhancing our visual storytelling.
+                        </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="https://www.linkedin.com/in/mo-hawagri/" target="_blank" rel="noopener noreferrer" class="text-cw-gray hover:text-cw-burgundy transition-colors" aria-label="Mo's LinkedIn">
+                                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+                            </a>
+                            <a href="https://x.com/mohawagri" target="_blank" rel="noopener noreferrer" class="text-cw-gray hover:text-cw-burgundy transition-colors" aria-label="Mo's X Profile">
+                               <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                           </a>
+                           <a href="https://linktr.ee/mohawagri" target="_blank" rel="noopener noreferrer" class="text-cw-gray hover:text-cw-burgundy transition-colors" aria-label="Mo's LinkTree">
+                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path></svg>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md border border-gray-200/50 overflow-hidden text-center hover:shadow-lg transition-shadow duration-300">
+                    <img src="https://chinawest.consulting/assets/nikita-simkhovich.jpg" alt="Nikita Simkhovich, European Trade Consultant" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-semibold text-cw-navy mb-1">Nikita Simkhovich</h3>
+                        <p class="text-xs uppercase text-cw-burgundy font-medium tracking-wider mb-3">EUROPEAN TRADE CONSULTANT</p>
+                        <p class="text-caption text-cw-gray mb-4">
+                            Nikita brings extensive technical and business experience from a European perspective, specializing in geopolitical and macroeconomic dynamics between China and the EU.
+                        </p>
+                         <div class="flex justify-center space-x-3">
+                             <a href="https://www.linkedin.com/in/nikita-simkhovich/" target="_blank" rel="noopener noreferrer" class="text-cw-gray hover:text-cw-burgundy transition-colors" aria-label="Nikita Simkhovich LinkedIn">
+                                 <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+                             </a>
+                             <a href="https://chinawest.consulting/" target="_blank" rel="noopener noreferrer" class="text-cw-gray hover:text-cw-burgundy transition-colors" aria-label="China West Consulting Website">
+                                 <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path></svg>
+                             </a>
+                             <a href="mailto:hello@chinawest.consulting" class="text-cw-gray hover:text-cw-burgundy transition-colors" aria-label="Email Nikita Simkhovich">
+                                 <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"></path></svg>
+                             </a>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white">
+        <div class="container mx-auto">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-h2 font-serif font-bold uppercase text-cw-navy mb-4">
+                    Cultural Insights
+                </h2>
+                <p class="text-lg text-cw-gray">
+                    Gain deeper understanding of Chinese culture, business practices, and market trends through our regularly updated insights.
+                </p>
+            </div>
+
+             <div class="grid md:grid-cols-3 gap-8">
+                 {% assign all_culture = site.posts | where: 'category', 'culture' %}
+                 {% for entry in all_culture limit: 3 %}
+                     {% assign title = entry.title | default: 'Cultural Insight' | markdownify | strip_html %}
+                     {% assign link = entry.link | default: entry.url | relative_url %}
+                     <div class="border border-gray-200/50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col">
+                        {% if entry.image.thumbnail %}
+                            {% assign entry_image = entry.image.thumbnail %}
+                            {% unless entry_image contains '://' %}{% assign entry_image = entry_image | relative_url %}{% endunless %}
+                            {% assign entry_image = entry_image | escape %}
+                             <a href="{{ link }}" class="block">
+                                <img src="{{ entry_image }}" alt="{{ title }}" class="w-full h-48 object-cover">
+                            </a>
+                        {% else %}
+                            <a href="{{ link }}" class="block bg-cw-offwhite h-48 flex items-center justify-center">
+                                <i data-lucide="image" class="text-cw-gray opacity-50 w-10 h-10"></i>
+                            </a>
+                        {% endif %}
+
+                         <div class="p-6 flex flex-col flex-grow">
+                            <p class="text-xs uppercase text-cw-burgundy font-medium tracking-wider mb-1">Culture</p>
+                            <h3 class="font-serif text-lg font-semibold text-cw-navy mb-2 flex-grow">
+                                <a href="{{ link }}" class="hover:text-cw-burgundy transition-colors">{{ title }}</a>
+                            </h3>
+                             {% unless page.show_excerpts == false %}
+                                {% if entry.excerpt %}
+                                <p class="text-caption text-cw-gray mb-4">
+                                    {{ entry.excerpt | markdownify | strip_html | truncatewords: 25 }}
+                                </p>
+                                {% endif %}
+                             {% endunless %}
+                             {% if site.read_time or entry.date and page.layout != 'collection' %}
+                                <div class="text-xs text-cw-gray mt-auto flex items-center">
+                                    {%- unless page.layout == 'collection' -%}
+                                    <i data-lucide="calendar" class="w-3.5 h-3.5 mr-1.5"></i>
+                                    <time datetime="{{ entry.date | date_to_xmlschema }}">
+                                        {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
+                                        {{ entry.date | date: date_format }}
+                                    </time>
+                                    {%- endunless -%}
+                                     </div>
+                            {% endif %}
+                         </div>
+                    </div>
+                {% endfor %}
+                 </div>
+
+             <div class="text-center mt-12">
+                 <a href="https://chinawest.consulting/culture" class="border border-cw-burgundy text-cw-burgundy py-2 px-6 rounded-md hover:bg-cw-burgundy hover:text-white transition duration-300 text-base font-medium inline-block">
+                    Explore All Cultural Insights
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-cw-navy text-white">
+        <div class="container mx-auto text-center max-w-3xl">
+             <h2 class="text-h2 font-serif font-bold uppercase mb-6">
+                 Ready to Expand Your Business into China?
+             </h2>
+            <p class="text-lg opacity-90 mb-8 leading-relaxed">
+                 Schedule a consultation with our experts to discuss your specific needs and goals. We'll help you develop a tailored strategy for success in the Chinese market.
+            </p>
+              <a href="mailto:hello@chinawest.consulting" class="border border-white text-white py-2 px-6 rounded-md hover:bg-white hover:text-cw-navy transition duration-300 text-base font-medium inline-block">
+                Contact Us Today
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-cw-offwhite">
+        <div class="container mx-auto max-w-2xl text-center">
+             <h2 class="text-h2 font-serif font-bold uppercase text-cw-navy mb-4">
+                Start Your China Journey
+            </h2>
+            <p class="text-base text-cw-gray mb-8">
+                Contact us today for a confidential discussion about your objectives in China. Our senior partners are ready to explore how China West can provide the strategic clarity and execution support needed to accelerate your success.
+            </p>
+             <form name="contact" action="https://formsubmit.co/hello@chinawest.consulting" method="POST" class="space-y-4 text-left bg-white p-8 rounded-lg shadow-md border border-gray-200/50">
+                 <input type="hidden" name="form-name" value="contact" />
+                 <div>
+                    <label for="name" class="block text-caption font-medium text-cw-navy mb-1">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Full Name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-cw-burgundy focus:border-cw-burgundy transition duration-200 bg-cw-offwhite text-base font-sans">
+                </div>
+                  <div>
+                    <label for="email" class="block text-caption font-medium text-cw-navy mb-1">Company Email</label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@company.com" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-cw-burgundy focus:border-cw-burgundy transition duration-200 bg-cw-offwhite text-base font-sans">
+                </div>
+                  <div>
+                    <label for="message" class="block text-caption font-medium text-cw-navy mb-1">Your Inquiry</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Briefly describe your interest or challenge..." class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-cw-burgundy focus:border-cw-burgundy transition duration-200 bg-cw-offwhite text-base font-sans"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="w-full bg-cw-burgundy text-white py-3 px-8 rounded-md hover:bg-opacity-90 transition duration-300 text-lg font-medium shadow-md">
+                        Send Inquiry
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-cw-navy text-cw-offwhite py-8 px-6 md:px-12 lg:px-24">
+        <div class="container mx-auto">
+             <div class="grid md:grid-cols-4 gap-8 mb-8 text-caption">
+                 <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-3">
+                        <div class="w-5 h-5 bg-cw-burgundy rounded-sm"></div>
+                        <span class="font-serif text-lg font-semibold">CHINA WEST Consulting</span>
+                    </div>
+                    <p class="opacity-70 leading-relaxed mb-4">
+                        China West Consulting specializes in bridging the gap between Western businesses and the Chinese market, providing expert guidance for successful cross-border operations.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="https://www.linkedin.com/company/china-west-consulting" target="_blank" rel="noopener noreferrer" class="text-cw-offwhite/70 hover:text-white transition-colors" aria-label="China West Consulting LinkedIn">
+                             <svg class="social-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+                        </a>
+                        <a href="https://youtube.com/@ChinaWestConsulting" target="_blank" rel="noopener noreferrer" class="text-cw-offwhite/70 hover:text-white transition-colors" aria-label="China West Consulting YouTube">
+                            <svg class="social-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.582 7.144a2.765 2.765 0 0 0-1.943-1.975C18.22 4.8 12 4.8 12 4.8s-6.22 0-7.639.369A2.765 2.765 0 0 0 2.418 7.144 29.118 29.118 0 0 0 2.025 12c0 2.138.148 3.737.393 4.856a2.765 2.765 0 0 0 1.943 1.975c1.419.369 7.639.369 7.639.369s6.22 0 7.639-.369a2.765 2.765 0 0 0 1.943-1.975A29.118 29.118 0 0 0 21.975 12c0-2.138-.148-3.737-.393-4.856zM9.75 15.3V8.7l5.25 3.3-5.25 3.3z"></path></svg>
+                        </a>
+                        <a href="https://x.com/ChinaWestConsul" target="_blank" rel="noopener noreferrer" class="text-cw-offwhite/70 hover:text-white transition-colors" aria-label="China West Consulting X Profile">
+                             <svg class="social-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                        </a>
+                        <a href="mailto:hello@chinawest.consulting" class="text-cw-offwhite/70 hover:text-white transition-colors" aria-label="Email China West Consulting">
+                            <svg class="social-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"></path></svg>
+                        </a>
+                    </div>
+                 </div>
+                 <div>
+                    <h4 class="font-medium mb-3 uppercase tracking-wider text-caption">Quick Links</h4>
+                    <ul class="space-y-2 opacity-70">
+                         <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+                         <li><a href="#testimonials" class="hover:text-white transition-colors">Success Stories</a></li>
+                         <li><a href="#team" class="hover:text-white transition-colors">Our Team</a></li>
+                         <li><a href="#blog" class="hover:text-white transition-colors">Cultural Insights</a></li>
+                         <li><a href="#contact" class="hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                 </div>
+                 <div>
+                     <h4 class="font-medium mb-3 uppercase tracking-wider text-caption">Contact</h4>
+                     <ul class="space-y-2 opacity-70">
+                        <li>San Francisco, California, USA</li>
+                        <li>Shanghai, China</li>
+                        <li><a href="mailto:hello@chinawest.consulting" class="hover:text-white transition-colors">hello@chinawest.consulting</a></li>
+                        <li><a href="tel:+14155551234" class="hover:text-white transition-colors">+1 (415) 555-1234</a></li>
+                    </ul>
+                 </div>
+             </div>
+             <div class="border-t border-white/20 pt-6 text-center md:text-left md:flex justify-between items-center text-xs">
+                <p class="opacity-70 mb-4 md:mb-0">
+                    © <script>document.write(new Date().getFullYear())</script> China West Consulting. All Rights Reserved.
+                </p>
+                <div class="opacity-70">
+                     <a href="#" class="hover:text-white transition duration-200 mx-2">Privacy Policy</a> <span class="mx-1">|</span>
+                    <a href="#" class="hover:text-white transition duration-200 mx-2">Terms of Service</a> <span class="mx-1">|</span>
+                     <a href="#" class="hover:text-white transition duration-200 mx-2">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons(); // Initialize Lucide icons
+    </script>
+
+    </body>
+</html>

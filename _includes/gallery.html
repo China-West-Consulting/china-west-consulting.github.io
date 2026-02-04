@@ -1,0 +1,105 @@
+<style>
+    /* Basic reset and font (optional - adapt to your site's styles) */
+    .enhanced-gallery *,
+    .enhanced-gallery *::before,
+    .enhanced-gallery *::after {
+      box-sizing: border-box;
+    }
+  
+    .enhanced-gallery {
+      /* Use CSS Grid for a responsive layout */
+      display: grid;
+      /* Adjust minmax(250px, 1fr) - 250px is the minimum item width */
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      /* Gap between grid items */
+      gap: 1.5rem; /* Adjust gap size as needed */
+      padding: 1rem; /* Add some padding around the gallery */
+      list-style: none; /* Remove potential list bullets */
+      margin: 0;
+    }
+  
+    .enhanced-gallery-item {
+      /* Style for each gallery item container */
+      position: relative; /* Needed for absolute positioning of caption */
+      overflow: hidden; /* Hide image parts that zoom outside the container */
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+      transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Smooth transition for hover */
+    }
+  
+    .enhanced-gallery-item:hover {
+       /* Slightly lift the item on hover */
+       transform: translateY(-5px);
+       box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+  
+    .enhanced-gallery-link {
+      display: block; /* Make the link fill the figure */
+      text-decoration: none; /* Remove underline from link */
+      color: inherit; /* Inherit text color */
+      position: relative; /* For overlay */
+      background-color: #222; /* Dark background for contrast */
+    }
+  
+    .enhanced-gallery-image {
+      display: block; /* Remove extra space below image */
+      width: 100%; /* Make image fill its container */
+      height: auto; /* Maintain aspect ratio */
+      aspect-ratio: 1 / 1; /* Force square aspect ratio - adjust or remove if needed */
+      object-fit: cover; /* Cover the area, cropping if necessary */
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s ease-out; /* Smooth zoom and fade */
+      border-radius: 8px; /* Match parent border radius */
+    }
+  
+    .enhanced-gallery-link:hover .enhanced-gallery-image {
+      transform: scale(1.05); /* Slightly zoom image on hover */
+      opacity: 0.7; /* Slightly fade image to make caption stand out */
+    }
+  
+    .enhanced-gallery-caption {
+      position: absolute; /* Position over the image */
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%); /* Gradient background */
+      color: #ffffff; /* White text */
+      padding: 1.5rem 1rem 1rem; /* Padding (more at bottom) */
+      font-size: 0.9rem;
+      text-align: center;
+      opacity: 0; /* Hidden by default */
+      transform: translateY(20px); /* Start slightly below */
+      transition: opacity 0.4s ease-out, transform 0.4s ease-out; /* Smooth fade and slide */
+      pointer-events: none; /* Allow clicks to go through to the link */
+      border-bottom-left-radius: 8px; /* Match parent */
+      border-bottom-right-radius: 8px; /* Match parent */
+    }
+  
+    .enhanced-gallery-link:hover .enhanced-gallery-caption {
+      opacity: 1; /* Show caption on hover */
+      transform: translateY(0); /* Slide caption into place */
+    }
+  
+    /* Style for when there's no caption - ensures hover effect still works */
+     .enhanced-gallery-link:hover .enhanced-gallery-image:not(:has(+ .enhanced-gallery-caption)) {
+        opacity: 0.85; /* Slightly less fade if no caption */
+     }
+  
+  </style>
+  
+  <div class="enhanced-gallery">
+    {% for img in include.gallery %}
+      {% if img.image_path %}
+        <figure class="enhanced-gallery-item">
+          <a href="{{ img.url | default: img.image_path }}" class="enhanced-gallery-link" {% if include.lightbox_group %}data-lightbox="{{ include.lightbox_group }}" data-title="{{ img.alt }}{% if img.title %} - {{ img.title }}{% endif %}"{% endif %} aria-label="{{ img.alt | default: 'Gallery image' }}">
+            <img src="{{ img.image_path }}" alt="{{ img.alt | default: '' }}" class="enhanced-gallery-image" loading="lazy">
+            {% if img.title %}
+              <figcaption class="enhanced-gallery-caption">{{ img.title }}</figcaption>
+            {% endif %}
+          </a>
+        </figure>
+      {% endif %}
+    {% endfor %}
+  </div>
+  
+  

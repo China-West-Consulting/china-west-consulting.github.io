@@ -1,0 +1,69 @@
+{% comment %}
+The following script assumes that the feature section is well-formed HTML and that each <li> in the section contains three colon-separated values.
+{% endcomment %}
+
+{% assign feature_section_parts = include.content | split: '<h2 id="features">' %}
+{% assign feature_section_full = '' %}
+{% if feature_section_parts.size > 1 %}
+  {% assign feature_section_with_rest = feature_section_parts[1] | split: '<h2' %}
+  {% assign feature_section_full = '<h2 id="features">' | append: feature_section_with_rest.first %}
+{% endif %}
+
+{% assign features = '' %}
+{% assign rest_of_feature_section = '' %}
+{% assign in_feature_section = false %}
+{% assign feature_count = 0 %}
+{% assign features_rest = '' %}
+{% assign button_links = '' %}
+
+{% comment %} Splitting the section into list items {% endcomment %}
+{% assign list_items = feature_section_full | split: '<li>' %}
+
+<section id="first" class="main special">
+  <header class="major">
+    <h2 id="features">Features</h2>
+  </header>
+
+  <ul class="features">
+    {% for item in list_items %}
+      {% if forloop.index > 1 %}
+        {% if forloop.index < 5 %}
+          {% assign li_content = item | split: '</li>' | first %}
+          {% assign feature_parts = li_content | split: ':' %}
+          
+          <li>
+            <span class="icon solid major style{{ forloop.index }} {{ feature_parts[2] | strip_html | strip_newlines | strip }}"></span>
+            <h3>{{ feature_parts[0] | strip_html | strip_newlines | strip }}</h3>
+            <p>{{ feature_parts[1] | strip_html | strip_newlines | strip }}</p>
+          </li>
+        {% else %}
+          {% assign features_rest = features_rest | append: '<li>' | append: item %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  {% comment %} Process features_rest to extract button links {% endcomment %}
+  {% assign rest_parts = features_rest | split: '<a ' %}
+  {% assign features_rest_cleaned = rest_parts[0] %}
+  {% for part in rest_parts offset:1 %}
+    {% if part contains 'class="button' %}
+      {% assign link_parts = part | split: '>' %}
+      {% assign link_url_parts = link_parts[0] | split: '"' %}
+      {% assign link_text_parts = link_parts[1] | split: '<' %}
+      {% assign button_links = button_links | append: '<li><a ' | append: link_parts[0] | append: '>' | append: link_text_parts[0] | append: '</a></li>' %}
+    {% else %}
+      {% assign features_rest_cleaned = features_rest_cleaned | append: '<a ' | append: part %}
+    {% endif %}
+  {% endfor %}
+
+  <footer class="major">
+    <ul class="actions special">
+      {{ button_links | strip_newlines }}
+    </ul>
+    <ul style="text-align: left">
+      {{ features_rest_cleaned | raw }}
+    </ul>
+  </footer>
+</section>
+
